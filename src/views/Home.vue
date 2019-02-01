@@ -4,7 +4,6 @@
       <div class="column is-12 has-text-centered buttons">
         <button @click="openWindow()" class="button is-primary">Open Window</button>
         <button @click="closeWindow()" class="button is-info">Close Window</button>
-        <button @click="sendMessage()" class="button is-success">Send Message</button>
         <button @click="getProfile()" class="button is-danger">Get Profile</button>
       </div>
     </div>
@@ -90,18 +89,6 @@ export default {
     },
     closeWindow () {
       this.$liff.closeWindow()
-    },
-    sendMessage () {
-      this.$liff.sendMessages([
-        {
-          type: 'text',
-          text: 'You/\'ve successfully sent a message! Hooray!'
-        }
-      ]).then(function () {
-        window.alert('Message sent')
-      }).catch(function (error) {
-        window.alert('Error sending message: ' + error)
-      })
     },
     getProfile () {
       let _this = this
