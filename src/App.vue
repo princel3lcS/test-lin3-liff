@@ -6,8 +6,10 @@
 
 <script>
 export default {
-  beforeCreate () {
-    this.$liff.init((data) => {})
+  mounted () {
+    this.$liff.init((data) => {
+      console.log(data, 'data')
+    })
   }
 }
 </script>
