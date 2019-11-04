@@ -9,6 +9,7 @@ export default {
   mounted () {
     this.$liff.init((data) => {
       console.log(data, 'data')
+      alert(this.$route.query.test)
     })
   }
 }
